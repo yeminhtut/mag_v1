@@ -1,0 +1,117 @@
+.form-input-wrapper{margin-bottom:10px;}
+#input-web{color:#FFF}.preload{background:url('/wp-content/themes/magazine(2016)/images/loader.gif') center no-repeat #fff}
+@media only screen and (min-width: 768px){
+    nav#main-menu.site-navigation ul li a{padding:10px;}
+}
+@media only screen and (max-width: 768px){
+    #motto{width: 100%;}
+}
+.destination-expert{display: inline-block;}
+footer{position: relative;}
+.tabs_container .tab-content-city{position: absolute;top: 0;left: 0;right: 0;display: none;}
+.tabs_container .tab-content-city:first-child{display: block;}
+ul.tab-nav-city{margin-bottom: 20px;border-bottom: 1px solid #dedada!important;margin: 0 0 20px;}
+ul.tab-nav-city li{width: 33.3333%;text-align: center;display: inline-block;list-style: none;vertical-align: bottom;margin-bottom: 0;}
+ul.tab-nav-city li a{background-color: #f9f9f9;padding: 10px 15px;display: block;font-weight: 700;text-transform: uppercase;vertical-align: bottom;}
+ul.tab-nav-city li a.active{background-color: #212121;color: #fff!important;border-color: #c51818;}
+@media screen and (max-width: 480px){
+    .site-navigation ul li.menu-item-has-children ul.sub-menu{width: 100%;}
+}
+.form-input{width:100%;height:40px;padding:4px}.form-helper-submit{border:none;border-radius:5px;float:right;margin:0;padding:9px 14px!important;width:100px;background:#c51818;color:#FFF}#enquiry_content,.content_area,.margin{width:100%}.cls{clear:both}.margin{height:10px}.success_msg{display:none;color:#3c763d;background-color:#dff0d8;padding:10px;border-radius:4px;text-align:center;font-weight:700;border:1px solid #DBE2DB}#remove-wrapper{margin:10px auto 0}#contest-form-wrapper{padding:20px;max-width:720px;margin:0 auto;width:100%;background-color:#fbfcfd;border:1px solid #e7ecf1}#contest-contact-wrapper{width:49%;float:right}#contest-form-submit{background-color:#2fa9dd;border-radius:5px;color:#fff;float:right;padding:10px 16px;cursor:pointer}.input-group{position:relative;display:table;border-collapse:separate;border:1px solid #ccc}.input-group-addon{box-shadow:none;border-radius:0;padding:6px 12px;font-size:14px;font-weight:400;line-height:1;color:#555;text-align:center;background-color:#eee;border:none;border-right:1px solid #ccc}.input-group .form-control{position:relative;z-index:2;float:left;width:100%;margin-bottom:0}.form-control{display:block;width:100%;height:40px;padding:6px 12px;line-height:1.42857143;color:#555;background-color:#fff;background-image:none;border:none}textarea.form-control{height:auto}.form-control input:focus,.form-control select:focus,.form-control textarea:focus{font-size:14px}
+#subscribe-input-group > div.input-group-addon { background-color: inherit!important; border: none!important; }
+/*@media screen and (-webkit-min-device-pixel-ratio:0){input:focus,select:focus,textarea:focus{font-size:14px!important}}*/.form-input-wrapper{margin-bottom:10px}
+#gn-submit{background-color:#EC5E5E;border-radius:0; padding: 9px 14px!important;}#error-msg{display:none;color:#a94442;background-color:#f2dede;padding:10px;margin-bottom:10px;border:1px solid transparent;border-radius:4px;opacity:1}#processing_div{background-color:#ec5e5e;border-radius:0;display:inline-block;padding:10px 14px;color:#FFF;float:right;font:14px/180% Lora,Georgia,serif;cursor:pointer;font-weight:700;text-transform:uppercase;border:none;-webkit-appearance:none}
+.interest-section-sponspor-title{width:60%;float:left;}
+@media only screen and (max-width: 480px){
+    .interest-section-sponspor-title,#sponsor_link{
+        width: 100%;
+        float: none;
+    }
+    #sponsor_content_wrapper{
+        padding: 0px;
+    }
+}
+
+table {
+    max-width: 100%;
+}
+
+th {
+    text-align: left;
+}
+
+.tz_table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.tz_table > thead > tr > th,
+.tz_table > tbody > tr > th,
+.tz_table > tfoot > tr > th,
+.tz_table > thead > tr > td,
+.tz_table > tbody > tr > td,
+.tz_table > tfoot > tr > td {
+    padding: 8px;
+    line-height: 1.428571429;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+
+.tz_table > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+}
+
+.tz_table > caption + thead > tr:first-child > th,
+.tz_table > colgroup + thead > tr:first-child > th,
+.tz_table > thead:first-child > tr:first-child > th,
+.tz_table > caption + thead > tr:first-child > td,
+.tz_table > colgroup + thead > tr:first-child > td,
+.tz_table > thead:first-child > tr:first-child > td {
+    border-top: 0;
+}
+
+.tz_table > tbody + tbody {
+    border-top: 2px solid #ddd;
+}
+
+.tz_table .tz_table {
+    background-color: #fff;
+}
+
+.tz_table-condensed > thead > tr > th,
+.tz_table-condensed > tbody > tr > th,
+.tz_table-condensed > tfoot > tr > th,
+.tz_table-condensed > thead > tr > td,
+.tz_table-condensed > tbody > tr > td,
+.tz_table-condensed > tfoot > tr > td {
+    padding: 5px;
+}
+
+.tz_table-bordered {
+    border: 1px solid #ddd;
+}
+
+.tz_table-bordered > thead > tr > th,
+.tz_table-bordered > tbody > tr > th,
+.tz_table-bordered > tfoot > tr > th,
+.tz_table-bordered > thead > tr > td,
+.tz_table-bordered > tbody > tr > td,
+.tz_table-bordered > tfoot > tr > td {
+    border: 1px solid #ddd;
+}
+
+.tz_table-bordered > thead > tr > th,
+.tz_table-bordered > thead > tr > td {
+    border-bottom-width: 2px;
+}
+
+.tz_table-striped > tbody > tr:nth-child(odd) > td,
+.tz_table-striped > tbody > tr:nth-child(odd) > th {
+    background-color: #eaeaea;
+}
+
+.tz_table-hover > tbody > tr:hover > td,
+.tz_table-hover > tbody > tr:hover > th {
+    background-color: #f5f5f5;
+}
