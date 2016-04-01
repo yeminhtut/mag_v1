@@ -37,11 +37,9 @@ function initialise_Scrollspy(){
 	jQuery('.load_next_post_cls').scrollSpy();
 
 	// spy on post-divider - changes the URL in browser location, loads new post 
-	// jQuery('.time_to_change').on('scrollSpy:enter', changeURL_scrollUp ); 
- //    jQuery('.time_to_change').on('scrollSpy:exit', changeURL_scrollUp ); 
- //    jQuery('.post-divider').on('scrollSpy:enter', load_next_post );
- //    jQuery('.post-divider').scrollSpy();
- //    jQuery('.time_to_change').scrollSpy();
+	jQuery('.time_to_change').on('scrollSpy:enter', changeURL_scrollUp ); 
+	jQuery('.time_to_change').on('scrollSpy:exit', changeURL_scrollUp ); 
+    jQuery('.time_to_change').scrollSpy();
 }
 
 //load k+1 post content when k title enter to view port
@@ -77,7 +75,7 @@ function doAutoLoad(){
 	// remove the post navigation HTML
 	jQuery(nav_container).remove();
 
-	console.log('no more prev post-navigation');
+	//console.log('no more prev post-navigation');
 	jQuery.get( np_url , function( data ) { 
 	
 		var $post_html = jQuery(data ); 
@@ -88,19 +86,14 @@ function doAutoLoad(){
 
 		jQuery( content_container ).append( $post_html );
 		//FB.XFBML.parse();
-		// get the HR element and add the data-title
-		// jQuery('hr[data-url="' + post_url + '"]').attr( 'data-title' , $title.text() );
-		// jQuery('hr[data-url="' + post_url + '"]').attr( 'data-nextid' , next_post_data_id );
-		// jQuery('hr[data-url="' + post_url + '"]').css({"height": "50px", "border": 'none','background':'#FFF'});
-
-		jQuery('.load_next_post_cls').attr( 'data-url' , window.location.href );
-		jQuery('.load_next_post_cls').attr( 'data-title' , $title.text() );
-		jQuery('.load_next_post_cls').attr( 'data-next-id' , next_post_data_id );
+		jQuery('.load_next_post_cls').attr('data-url' , window.location.href );
+		jQuery('.load_next_post_cls').attr('data-title' , $title.text() );
+		jQuery('.load_next_post_cls').attr('data-next-id' , next_post_data_id );
 		 	
 		// need to set up ScrollSpy on new content
 		initialise_Scrollspy();		
 	});
-	console.log(post_url + ' is loaded when k enter to viewport');
+	//console.log(post_url + ' is loaded when k enter to viewport');
 }
 
 function changeURL_scrollUp(){
@@ -119,22 +112,22 @@ function changeURL_scrollUp(){
 			History.pushState(null, null, this_nexturl );
 			window.document.title = this_nexttitle;
 			//send ga tracking
-			var ga_url = this_nexturl.replace(main_url, "");
-			ga('send', 'pageview', ga_url);
+			// var ga_url = this_nexturl.replace(main_url, "");
+			// ga('send', 'pageview', ga_url);
 			
 			//reload fb 
 			//FB.XFBML.parse();
 			//change iframe url
-			var curr_iframe_url = jQuery('iframe#sg_ifr').attr('src');
-			if (curr_iframe_url) {
-				//console.log(curr_iframe_url);
-				var curr_iframe_keyword = curr_iframe_url.substr(curr_iframe_url.lastIndexOf('/') + 1);
-				//console.log(curr_iframe_keyword);
-				var newkeyword = jQuery('article#post-'+change_post_id).attr('data-iframe-keyword');
-				//var newkeyword = 'singapore';
-				var new_iframe_url = curr_iframe_url.replace(curr_iframe_keyword, newkeyword);
-				jQuery('#sg_ifr').attr('src',new_iframe_url);    
-			};			
+			// var curr_iframe_url = jQuery('iframe#sg_ifr').attr('src');
+			// if (curr_iframe_url) {
+			// 	//console.log(curr_iframe_url);
+			// 	var curr_iframe_keyword = curr_iframe_url.substr(curr_iframe_url.lastIndexOf('/') + 1);
+			// 	//console.log(curr_iframe_keyword);
+			// 	var newkeyword = jQuery('article#post-'+change_post_id).attr('data-iframe-keyword');
+			// 	//var newkeyword = 'singapore';
+			// 	var new_iframe_url = curr_iframe_url.replace(curr_iframe_keyword, newkeyword);
+			// 	jQuery('#sg_ifr').attr('src',new_iframe_url);    
+			// };			
 		};
 	}
 	else{
@@ -144,22 +137,22 @@ function changeURL_scrollUp(){
 			History.pushState(null, null, this_url );
 			window.document.title = this_title;
 			//send ga tracking
-			var ga_url = this_url.replace(main_url, "");
-			ga('send', 'pageview', ga_url);
+			// var ga_url = this_url.replace(main_url, "");
+			// ga('send', 'pageview', ga_url);
 			
 			//reload fb 
 			//FB.XFBML.parse();
 			//change iframe url
-			var curr_iframe_url = jQuery('iframe#sg_ifr').attr('src');
-			if (curr_iframe_url) {
-				//console.log(curr_iframe_url);
-				var curr_iframe_keyword = curr_iframe_url.substr(curr_iframe_url.lastIndexOf('/') + 1);
-				//console.log(curr_iframe_keyword);
-				var newkeyword = jQuery('article#post-'+change_post_id).attr('data-iframe-keyword');
-				//var newkeyword = 'singapore';
-				var new_iframe_url = curr_iframe_url.replace(curr_iframe_keyword, newkeyword);
-				jQuery('#sg_ifr').attr('src',new_iframe_url);    
-			};	
+			// var curr_iframe_url = jQuery('iframe#sg_ifr').attr('src');
+			// if (curr_iframe_url) {
+			// 	//console.log(curr_iframe_url);
+			// 	var curr_iframe_keyword = curr_iframe_url.substr(curr_iframe_url.lastIndexOf('/') + 1);
+			// 	//console.log(curr_iframe_keyword);
+			// 	var newkeyword = jQuery('article#post-'+change_post_id).attr('data-iframe-keyword');
+			// 	//var newkeyword = 'singapore';
+			// 	var new_iframe_url = curr_iframe_url.replace(curr_iframe_keyword, newkeyword);
+			// 	jQuery('#sg_ifr').attr('src',new_iframe_url);    
+			// };	
 		};
 	}
 }

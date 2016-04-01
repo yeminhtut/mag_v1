@@ -1,3 +1,24 @@
+<?php
+//get custom keyword to change iframe url
+$keywords    = simple_fields_value('keywords');
+$keyword_arr = explode(',', $keywords);
+$key_index   = 0;
+if (count($keyword_arr) > 1) {
+    $key_index = array_rand($keyword_arr, 1);
+}
+$filter_key     = trim(strip_tags($keyword_arr[$key_index]));
+$filter_key     = strtolower($filter_key);
+$filter_key     = keyword_dictionary($filter_key);
+$filter_key     = str_replace(' ', '-', $filter_key);
+$custom_keyword = $filter_key;
+
+//get prev post url to load content with ajax
+$prevPost = get_previous_post(true);
+if ($prevPost) {
+    $next_post_url   = get_site_url() . '/' . $prevPost->post_name . '/' . $prevPost->ID;
+    $next_post_title = $prevPost->post_title;
+}
+?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class( 'hentry full-width-post' ); ?> >
 					<header class="single-post-header">						
@@ -56,6 +77,7 @@
 						break;
 				}		
 			?>
+	<hr style="background-color:#FFF;border:none;" class="time_to_change" data-title="<?= the_title();?>" data-url="<?= the_permalink();?>" data-nextposturl="<?= $next_post_url ?>" data-nextposttitle="<?= $next_post_title; ?>">
 				<!-- <div id="facebook_cmt">
 					<h3 class="main-box-title" style="border-bottom:none !important;">Share with us your thoughts</h3>
 					<div id="comment_box_wrap" style="margin-bottom:40px;">

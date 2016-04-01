@@ -51,10 +51,10 @@
 <script   src="https://code.jquery.com/jquery-1.12.2.min.js"   integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk="   crossorigin="anonymous"></script>
 <script type='text/javascript' async src='<?= get_site_url()?>/wp-includes/js/jquery/ui/widget.min.js'></script>
 <script type='text/javascript' async src='<?= get_site_url()?>/wp-includes/js/jquery/ui/tabs.min.js'></script>
-<!--<script type='text/javascript' src='<?= get_template_directory_uri()?>/js/plugin.js'></script>
+<script type='text/javascript' src='<?= get_template_directory_uri()?>/js/plugin.js'></script>
 <script type='text/javascript' async src='<?= get_template_directory_uri()?>/js/functions.js'></script>
 <script type='text/javascript' async src='<?= get_template_directory_uri()?>/js/custom.js?25'></script>
-<script type='text/javascript' async src='<?= get_template_directory_uri()?>/js/jquery.backstretch.min.js'></script>
+<!--<script type='text/javascript' async src='<?= get_template_directory_uri()?>/js/jquery.backstretch.min.js'></script>
 <script type='text/javascript' async src='<?= get_template_directory_uri()?>/js/custom_background.js?02'></script>
 <script src="<?php// bloginfo('template_directory'); ?>/js/map_multiple_marker.js"></script>
 <script type="text/javascript" src="<?= get_template_directory_uri()?>/js/catfish.js?22"></script>
