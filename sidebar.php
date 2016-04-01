@@ -5,19 +5,19 @@
 	// Load sidebar widgets
 	if ( is_single() ) :		
 			get_template_part('partials/widgets/widget','ads');
-			get_template_part('partials/widgets/widget','facebook');
-			get_template_part('partials/widgets/widget','sponsor-ads');		
+			//get_template_part('partials/widgets/widget','facebook');
+			//get_template_part('partials/widgets/widget','sponsor-ads');		
 		
 			echo '<div id="non_sticky_wrapper">';			
 			$check_mobile = detect_mobile(); 
 			if ($check_mobile === false) {
 				dynamic_sidebar( 'warrior-single-sidebar' ); 
 			}					
-			get_template_part('partials/widgets/widget', 'tripzillaPkgs');
+			//get_template_part('partials/widgets/widget', 'tripzillaPkgs');
 
 			//only show at desktop
 			if ($check_mobile === false) {
-				get_template_part('partials/widgets/widget','ads300x600'); 
+				//get_template_part('partials/widgets/widget','ads300x600'); 
 				//get_template_part('partials/widgets/widget','travelFair300x600'); 
 			}
 		echo "</div>";

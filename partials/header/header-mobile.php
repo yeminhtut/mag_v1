@@ -26,7 +26,7 @@
 			</div>
 			<nav id="main-menu" class="site-navigation">				
 				<div class="mobile-menu"></div>				
-				<ul id="menu-main_menu" class="main-menu">
+			<!-- 	<ul id="menu-main_menu" class="main-menu">
 				    <li id="menu-item-278" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-278">
 				        Destinations
 				        <ul class="sub-menu" id="m-destination">
@@ -163,7 +163,7 @@
 				        </ul>
 				    </li>
 				</ul>
-
+ -->
 			</nav>							
 						
 			

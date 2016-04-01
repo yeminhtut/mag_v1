@@ -23,18 +23,18 @@
 	<div id="main-header">
 		<div class="container clearfix">
 			<nav id="main-menu" class="site-navigation">
-				<?php get_template_part('partials/widgets/widget', 'menu'); ?>
+				<?php// get_template_part('partials/widgets/widget', 'menu'); ?>
 			</nav>
 		</div>
 	</div>
 	<?php 
-		if (!is_page_template( 'page-contact.php' ) && !is_page_template( 'page-fullwidth.php' ) && !is_single()  && !is_page_template( 'page-contest.php' )
-			&& !is_category(
-				array(
-					'luxury-spa-retreat','cruises-land-journeys','singapore','indonesia','thailand','japan','australia','malaysia','europe','south-korea','shopping-eating','island-beach','sports-adventure','family-kids')
-					)
-				) {
-				get_template_part('includes/featured-newslider');
-			}	
+		// if (!is_page_template( 'page-contact.php' ) && !is_page_template( 'page-fullwidth.php' ) && !is_single()  && !is_page_template( 'page-contest.php' )
+		// 	&& !is_category(
+		// 		array(
+		// 			'luxury-spa-retreat','cruises-land-journeys','singapore','indonesia','thailand','japan','australia','malaysia','europe','south-korea','shopping-eating','island-beach','sports-adventure','family-kids')
+		// 			)
+		// 		) {
+		// 		get_template_part('includes/featured-newslider');
+		// 	}	
 	?>
 </header>

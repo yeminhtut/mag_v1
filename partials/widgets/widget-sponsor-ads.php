@@ -5,7 +5,7 @@
 	?>
 	<div id="google_ads_box" style="text-align:center;margin-bottom: 40px;">
 		<a href="https://www.travelplanner.com.sg/customise-my-trip/" target="_blank">
-			<img src="/wp-content/uploads/2016/03/trip_planner.jpg" style="margin:0px auto;" class="banner_img" data-banneId = "1">
+			<img src="http://www.tripzilla.com/wp-content/uploads/2016/03/trip_planner.jpg" style="margin:0px auto;" class="banner_img" data-banneId = "1">
 		</a>
 	</div>
 <?php	} else{ ?>

@@ -438,8 +438,6 @@ add_shortcode('fzPriceBlock', 'fzPriceBlock_fn');
 add_filter( 'the_content', 'google_ads_parse');
 
 function google_ads_parse($content){
-		//$paragraphNumber = array('3','9');
-		$paragraphNumber = array('9');
 		$adCode = '<div style="clear:both"></div>
 		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 					<ins class="adsbygoogle"
@@ -451,15 +449,16 @@ function google_ads_parse($content){
 					(adsbygoogle = window.adsbygoogle || []).push({});
 					</script>
 					<div style="clear:both"></div>';
-		$content = insertAdAfterParagraph($adCode, $paragraphNumber , $content);
+		$content = insertAdAfterParagraph($adCode, $content);
 		return $content;
 }
-function insertAdAfterParagraph( $insertion, $paragraph_id, $content ) {
+function insertAdAfterParagraph( $insertion, $content ) {
 		$closing_p = '</p>';
-		$paragraphs = explode( $closing_p, $content );
-		$paragraph_id_for_desktop = $paragraph_id[0];
+		$paragraphs = explode( $closing_p, $content );		
 		$paragraph_count = count($paragraphs);
-		$insertion_point = ceil($paragraph_count/10) * 6;
+		$insertion_point_mobile = array((ceil($paragraph_count/10) * 3),(ceil($paragraph_count/10) * 6));
+		$insertion_point_desktop = ceil($paragraph_count/10) * 2;
+		$next_post_loading_point = ceil($paragraph_count/10) * 7;//adding engage point to load next post
 		$check_mobile = detect_mobile();
 		if ($check_mobile == true) {
 			foreach ($paragraphs as $index => $paragraph) {
@@ -469,20 +468,24 @@ function insertAdAfterParagraph( $insertion, $paragraph_id, $content ) {
 					// is outside of the paragraph markup, and not just inside of it.
 					$paragraphs[$index] .= $closing_p;
 				}
-				if (in_array($index + 1, $paragraph_id)) {
+				if (in_array($index + 1, $insertion_point_mobile)) {
 					$paragraphs[$index] .= '<div class="google_ads_mobile" style="clear:both;float:left;width:100%;margin:0 0 20px 0;">'.$insertion.'</div>';
 				}
 			}
 		}
+
 		if ($check_mobile == false) {
 			foreach ($paragraphs as $index => $paragraph) {
 				// Only add closing tag to non-empty paragraphs
 				if ( trim( $paragraph ) ) {					
 					$paragraphs[$index] .= $closing_p;
 				}
-				if ($insertion_point == $index + 1) {
-					$paragraphs[$index] .= '<div class="google_ads_mobile" style="clear:both;float:left;width:100%;margin:0 0 20px 0;">'.$insertion.'</div>';
+				if ($insertion_point_desktop == $index + 1) {
+					$paragraphs[$index] .= '<div class="google_ads_desktop" style="clear:both;float:left;width:100%;margin:0 0 20px 0;">'.$insertion.'</div><div class="load_next_post_cls" style="width:100%;height:1px;background:red;"></div>';
 				}
+				// if ($next_post_loading_point == $index + 1) {
+				// 	$paragraphs[$index] .= '<div class="load_next_post_cls" style="width:100%;height:1px;background:red;"></div>';
+				// }
 			}	
 		}		
 		return implode( '', $paragraphs );

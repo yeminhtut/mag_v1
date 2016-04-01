@@ -46,7 +46,7 @@
 				<h3 class="popup_title">Advertising &amp; Collaboration</h3>
 				<div class="row pop_up_write_up">
 					<div class="column column-2">
-						<img src="/wp-content/uploads/2016/02/popup_pc-1.jpg">
+						<img src="http://www.tripzilla.com/wp-content/uploads/2016/02/popup_pc-1.jpg">
 					</div>
 					<div class="column column-2 pop_up_des">
 						<p class="ads-widget-des">Break through the noise with native ads!</p>
